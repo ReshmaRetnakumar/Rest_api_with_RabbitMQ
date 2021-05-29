@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "a681e6d4-a813-4c36-bd11-c5f29f36c431",
+		"name": "register_user",
+		"description": "Registering User, API   -- register_user\r\nfields :name, email, Password\r\nMethod :  POST\r\n",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Adding user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "reshma",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/add_user?firstname=FIRST&lastname=LAST&email=first@gmail.com&age=25",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"add_user"
+					],
+					"query": [
+						{
+							"key": "firstname",
+							"value": "FIRST"
+						},
+						{
+							"key": "lastname",
+							"value": "LAST"
+						},
+						{
+							"key": "email",
+							"value": "first@gmail.com"
+						},
+						{
+							"key": "age",
+							"value": "25"
+						}
+					]
+				},
+				"description": "Registering User, API   -- register_user\r\nfields : name,email,Password\r\nMethod :  POST\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "File Upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file1",
+							"type": "file",
+							"src": "/D:/Projects/expres-framework/support_documents/newletter.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/ingest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ingest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send_mail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/send_mail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"send_mail"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
